@@ -59,8 +59,8 @@ public class Operator {
         System.out.println(a1!=b1);
         //移位运算符：>>、<<、>>>、
         byte v = -15;
-        System.out.println(v>>2);
-        System.out.println(v<<2);
-        System.out.println(v>>>2);
+        System.out.println(v>>2);                      //右移运算
+        System.out.println(v<<2);                      //左移运算
+        System.out.println(v>>>2);                     //无符号右移运算
     }
 }
