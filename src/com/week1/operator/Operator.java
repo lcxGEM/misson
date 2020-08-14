@@ -1,4 +1,4 @@
-package com.operator;
+package com.week1.operator;
 
 /**
  * 运算符测试
@@ -7,12 +7,12 @@ public class Operator {
     public static void main(String[] args) {
         //算术运算符：+、-、*、/、%、++、--
         System.out.println("---------算术运算---------");
-        int a=1;
-        int b = a+1;  // 加运算
+        long a=10000000000L;
+        int b = (int) (a+1);  // 加运算
         System.out.println("加运算："+b);
         b = b-1;      // 减运算
         System.out.println("减运算："+b);
-        b = a*10;     // 乘运算
+        b = (int) (a*10);     // 乘运算
         System.out.println("乘运算："+b);
         b = b/2;      // 除运算
         System.out.println("除运算："+b);

@@ -1,4 +1,4 @@
-package com.processControl;
+package com.week1.processControl;
 
 public class Demo2 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.keywords;
+package com.week1.keywords;
 
 public final class KeyWordsTestClient {
     public static void main(String[] args) {

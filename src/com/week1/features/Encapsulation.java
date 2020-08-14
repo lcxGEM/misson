@@ -1,4 +1,4 @@
-package com.features;
+package com.week1.features;
 
 /**
  * 封装

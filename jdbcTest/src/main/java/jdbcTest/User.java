@@ -1,6 +1,7 @@
 package jdbcTest;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * orm类
@@ -10,6 +11,7 @@ public class User implements Serializable {
     private String name;
     private int age;
     private String tel;
+    private BigDecimal salary;
 
     public int getId() {
         return id;
@@ -43,6 +45,14 @@ public class User implements Serializable {
         this.tel = tel;
     }
 
+    public BigDecimal getSalary() {
+        return salary;
+    }
+
+    public void setSalary(BigDecimal salary) {
+        this.salary = salary;
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -50,6 +60,7 @@ public class User implements Serializable {
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", tel='" + tel + '\'' +
+                ", salary=" + salary +
                 '}';
     }
 }

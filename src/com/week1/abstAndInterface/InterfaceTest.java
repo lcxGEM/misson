@@ -1,4 +1,4 @@
-package com.abstAndInterface;
+package com.week1.abstAndInterface;
 
 public interface InterfaceTest {
     //接口内的属性的修饰符默认是 public static final

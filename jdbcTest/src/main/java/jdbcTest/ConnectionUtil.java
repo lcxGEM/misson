@@ -1,9 +1,6 @@
 package jdbcTest;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class ConnectionUtil {
     static{
@@ -24,7 +21,14 @@ public class ConnectionUtil {
         return connection;
     }
 
-    public static void close(Connection connection, Statement statement){
+    public static void close(Connection connection, Statement statement, ResultSet rs){
+        if(rs!=null){
+            try {
+                rs.close();
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+        }
         if(statement!=null){
             try {
                 statement.close();

@@ -1,5 +1,10 @@
-package com.regularExpression;
+package com.week1.regularExpression;
 
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -7,6 +12,7 @@ import java.util.regex.Pattern;
 /**
  * 正则表达式测试
  */
+
 public class RegularExpression {
     public static void main(String[] args) {
         //第一种：创建Pattern对象

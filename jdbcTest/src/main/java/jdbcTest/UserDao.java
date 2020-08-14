@@ -20,7 +20,7 @@ public class UserDao {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            ConnectionUtil.close(connection,statement);
+            ConnectionUtil.close(connection,statement,null);
         }
         System.out.println("----------");
         return 0;
@@ -38,7 +38,7 @@ public class UserDao {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            ConnectionUtil.close(connection,statement);
+            ConnectionUtil.close(connection,statement,null);
         }
         System.out.println("----------");
         return 0;
@@ -56,7 +56,7 @@ public class UserDao {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            ConnectionUtil.close(connection,statement);
+            ConnectionUtil.close(connection,statement,null);
         }
         System.out.println("----------");
         return 0;
@@ -66,12 +66,13 @@ public class UserDao {
         List<User> userList = null;
         Connection connection = null;
         Statement statement = null;
+        ResultSet rs = null;
         try {
             //加载数据驱动
             connection  = ConnectionUtil.getConnection("jdbc:mysql://127.0.0.1:3306/test?useSSL=true&serverTimezone=GMT","root","zzuxq");
             statement = connection.createStatement();
             String sql = "select * from user;";
-            ResultSet rs= statement.executeQuery(sql);
+            rs= statement.executeQuery(sql);
             userList = new ArrayList<User>();
             while (rs.next()){
                 User user = new User();
@@ -85,7 +86,7 @@ public class UserDao {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            ConnectionUtil.close(connection,statement);
+            ConnectionUtil.close(connection,statement,rs);
         }
         System.out.println("----------");
         return null;
@@ -94,12 +95,13 @@ public class UserDao {
     public User getUserById(int id){
         Connection connection = null;
         Statement statement = null;
+        ResultSet rs=null;
         try {
             //加载数据驱动
             connection  = ConnectionUtil.getConnection("jdbc:mysql://127.0.0.1:3306/test?useSSL=true&serverTimezone=GMT","root","zzuxq");
             statement = connection.createStatement();
             String sql = "select * from user where id = "+id+";";
-            ResultSet rs= statement.executeQuery(sql);
+            rs= statement.executeQuery(sql);
             if(rs.next()){
                 User user = new User();
                 user.setId(rs.getInt(1));
@@ -113,7 +115,7 @@ public class UserDao {
         } catch (Exception e) {
             e.printStackTrace();
         }finally {
-            ConnectionUtil.close(connection,statement);
+            ConnectionUtil.close(connection,statement,rs);
         }
         System.out.println("----------");
         return null;

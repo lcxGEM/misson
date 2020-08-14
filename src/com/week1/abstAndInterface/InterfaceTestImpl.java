@@ -1,4 +1,4 @@
-package com.abstAndInterface;
+package com.week1.abstAndInterface;
 
 public class InterfaceTestImpl implements InterfaceTest {
     @Override

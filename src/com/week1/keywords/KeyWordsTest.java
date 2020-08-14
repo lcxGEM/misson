@@ -1,6 +1,4 @@
-package com.keywords;
-
-import com.keywordsTest.KeyWords;
+package com.week1.keywords;
 
 public class KeyWordsTest {
     // 访问控制符

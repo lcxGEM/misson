@@ -1,6 +1,6 @@
-package com.keywordsTest;
+package com.week1.keywordsTest;
 
-import com.keywords.KeyWordsTest;
+import com.week1.keywords.KeyWordsTest;
 
 public class KeyWords extends KeyWordsTest{
     public static void main(String[] args) {
